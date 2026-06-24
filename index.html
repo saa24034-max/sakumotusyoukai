@@ -1,39 +1,226 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>トマト紹介サイト</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おいしい作物の栽培紹介ページ</title>
+    <style>
+        /* CSSで全体の装飾（レスポンシブ対応） */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        h2 {
+            color: #c0392b;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 15px auto;
+        }
+        ul {
+            background: #fdf2f2;
+            padding: 20px 20px 20px 40px;
+            border-left: 5px solid #e74c3c;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #e74c3c;
+            color: white;
+        }
+        /* ボタンのスタイル */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .btn-school { background-color: #2ecc71; }
+        .btn-school:hover { background-color: #27ae60; }
+        .btn-cultivate { background-color: #3498db; }
+        .btn-cultivate:hover { background-color: #2980b9; }
+        
+        /* JavaScriptで変化させるボタンの初期スタイル */
+        #js-button {
+            background-color: #f1c40f;
+            color: #333;
+        }
 
-<style>
-body{
-    font-family: sans-serif;
-    background-color:#fff8f0;
-    color:#333;
-    margin:0;
-    padding:20px;
-}
+        /* スマホ向けのレスポンシブ微調整 */
+        @media (min-width: 600px) {
+            .btn-container {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .btn {
+                flex: 1;
+                max-width: 230px;
+            }
+        }
+    </style>
+</head>
+<body>
 
-header{
-    text-align:center;
-    background-color:#ff6b6b;
-    color:white;
-    padding:20px;
-    border-radius:10px;
-}
+    <header>
+        <h1>大人気！トマト・ミニトマト栽培ナビ</h1>
+    </header>
 
-img{
-    width:300px;
-    border-radius:10px;
-    display:block;
-    margin:auto;
-}
+    <nav>
+        <a href="#tomato">大玉トマト</a>
+        <a href="#minitomato">ミニトマト</a>
+    </nav>
 
-section{
-    margin-top:30px;
-}
+    <div class="container">
 
-table{
-    width:100%;
-    border-collapse: collapse;
-}
+        <section id="tomato">
+            <h2>大玉トマト（Tomato）</h2>
+            
+            <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=600" alt="赤く実った大玉トマト">
+
+            <p>トマトは南米アンデス山脈原産のナス科の植物で、夏の家庭菜園を代表する非常に人気のある作物です。太陽の光をたっぷり浴びることで、リコピンやビタミンCなどの栄養素を豊富に蓄えます。採れたてのトマトは、スーパーで買うものとは比べものにならないほど濃厚な甘みと適度な酸味が楽しめます。</p>
+
+            <h3>栽培のポイント</h3>
+            <ul>
+                <li><strong>日当たりと風通し：</strong> 太陽の光が大好きなので、一日中よく日の当たる場所で育てます。</li>
+                <li><strong>わき芽摘み：</strong> 栄養が分散しないよう、葉の付け根から出てくる「わき芽」は小さいうちに手で摘み取ります。</li>
+                <li><strong>水の管理：</strong> 実がつき始めたら水やりを少し控えめにすると、糖度が上がって甘いトマトになります。</li>
+            </ul>
+        </section>
+
+        <section id="minitomato">
+            <h2>ミニトマト（Cherry Tomato）</h2>
+            <img src="https://images.unsplash.com/photo-1561131248-c52d88621796?w=600" alt="たくさんのミニトマト">
+            
+            <p>ミニトマトは大玉トマトに比べて病気に強く、初心者でも非常に育てやすいのが特徴です。一株からたくさんの実が収穫できるため、毎日の収穫がとても楽しくなります。お弁当の彩りや、ちょっとしたサラダのトッピングにも最適な万能野菜です。</p>
+
+            <h3>栽培のポイント</h3>
+            <ul>
+                <li><strong>支柱立て：</strong> 背が高くなるので、成長に合わせてしっかりと支柱を立てて紐で固定します。</li>
+                <li><strong>追肥のタイミング：</strong> 最初の手が実を付け始めた頃から、定期的に肥料を与えてスタミナ切れを防ぎます。</li>
+                <li><strong>収穫のコツ：</strong> ヘタの周りまで真っ赤に熟したものを収穫すると、一番美味しい状態で食べられます。</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>栽培スケジュール＆難易度</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>作物名</th>
+                        <th>種まき時期</th>
+                        <th>収穫時期</th>
+                        <th>栽培難易度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>大玉トマト</td>
+                        <td>3月〜4月</td>
+                        <td>7月〜9月</td>
+                        <td>★★★☆☆（中級）</td>
+                    </tr>
+                    <tr>
+                        <td>ミニトマト</td>
+                        <td>3月〜4月</td>
+                        <td>6月〜10月</td>
+                        <td>★★☆☆☆（初級）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>関連リンク ＆ お楽しみ機能</h2>
+            <div class="btn-container">
+                <a href="https://saijo-ah.esnet.ed.jp/" target="_blank" class="btn btn-school">西条農業高校 Webサイト</a>
+
+                <a href="https://sakata-tsushin.com/oyasai/cultivation/type/tomato/" target="_blank" class="btn btn-cultivate">トマトの育て方（サカタのタネ）</a>
+
+                <button id="js-button" class="btn">ここを押してみてね！</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const jsButton = document.getElementById('js-button');
+        jsButton.addEventListener('click', function() {
+            // クリックされたら色と文字を変える
+            this.style.backgroundColor = '#2c3e50';
+            this.style.color = '#ffffff';
+            this.textContent = '応援しています！栽培がんばろう！';
+            alert('ボタンがクリックされました！応援メッセージに切り替わります。');
+        });
+    </script>
+
+</body>
+</html>
