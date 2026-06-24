@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイ作物紹介サイト：さつまいも ＆ とうもろこし</title>
+    <title>マイ作物紹介サイト</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* --- 条件6: 背景色や文字色など、CSSによる装飾（洗練されたデザイン） --- */
+        /* --- CSSによる装飾（レスポンシブ対応） --- */
         :root {
             --primary-color: #6a1b9a;   /* さつまいもの紫 */
             --accent-color: #fbc02d;    /* とうもろこしの黄 */
@@ -26,7 +26,7 @@
             line-height: 1.8;
         }
 
-        /* 1. 一番上の大見出し */
+        /* 1. 一番上の大見出し（課題名とマイ作物名を融合） */
         header {
             background: linear-gradient(135deg, #9c27b0, var(--primary-color));
             color: white;
@@ -46,7 +46,7 @@
             opacity: 0.9;
         }
 
-        /* 加点項目: 作物を2つ以上紹介し、ページ内リンクで飛べるナビゲーション */
+        /* 加点：ページ内リンク用ナビゲーション */
         nav {
             position: sticky;
             top: 0;
@@ -90,7 +90,7 @@
             margin-top: 0;
         }
 
-        /* 条件5: 画像表示（高解像度の表示確認済みURL） */
+        /* 5. 画像表示（レスポンシブ対応） */
         .crop-image {
             width: 100%;
             max-height: 380px;
@@ -100,7 +100,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* 条件3: 栽培のポイント（箇条書きリスト） */
+        /* 3. 栽培のポイント（箇条書き） */
         ul {
             background: #fbf7fc;
             padding: 20px 20px 20px 40px;
@@ -114,7 +114,7 @@
             color: var(--primary-color);
         }
 
-        /* 条件4: 表（table）を使った情報のまとめ */
+        /* 4. 表（table）を使った情報のまとめ */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -133,7 +133,7 @@
             background-color: #fbf7fc;
         }
 
-        /* 条件7・8・加点: ボタンエリア */
+        /* 7&8. ボタンエリア */
         .btn-container {
             display: flex;
             flex-direction: column;
@@ -153,21 +153,18 @@
             font-size: 1rem;
             transition: all 0.3s;
         }
-        /* 条件7: 西条農業高校ボタン */
         .btn-school { background-color: #2e7d32; }
         .btn-school:hover { background-color: #1b5e20; }
-        
-        /* 条件8: 外部栽培参考サイトボタン */
         .btn-seed { background-color: #0288d1; }
         .btn-seed:hover { background-color: #01579b; }
         
-        /* 加点項目: JavaScript用ボタン */
+        /* 加点：JavaScript用ボタン */
         #js-button {
             background-color: #f57c00;
             color: white;
         }
 
-        /* 加点項目: スマホで見ても崩れないレスポンシブ対応 */
+        /* 加点：スマホで見ても崩れないレスポンシブ対応 */
         @media (min-width: 600px) {
             .btn-container {
                 flex-direction: row;
@@ -182,8 +179,8 @@
 <body>
 
     <header>
-        <h1>マイ作物紹介：さつまいも ＆ とうもろこし</h1>
-        <p>家庭菜園や学校で挑戦したい！大好きな夏秋の魅力的な農作物</p>
+        <h1>マイ作物紹介サイト：さつまいも ＆ とうもろこし</h1>
+        <p>収穫がとにかく楽しい！私が挑戦したい大好きな夏秋の作物</p>
     </header>
 
     <nav>
@@ -199,7 +196,7 @@
             
             <img class="crop-image" src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800" alt="収穫されたさつまいも">
 
-            <p>私が1つ目に選んだマイ作物は、秋の味覚を代表する「さつまいも」です。さつまいもは痩せた土壌でも元気に育つため、肥料の与えすぎを気にせず初心者でも安心して栽培できます。秋の収穫期には宝探しのような芋掘りの楽しさを味わうことができ、収穫後に少し寝かせることでさらに甘みが増していくのも大きな魅力です。</p>
+            <p>私が1つ目に選んだマイ作物は、秋の味覚を代表する「さつまいも」です。さつまいもは痩せた土壌でも元気に育つため、肥料の与えすぎを気にせず初心者でも安心して栽培できます。秋の収穫期には宝探しのような芋掘りの楽しさを味わうことができ、収穫後に寝かせることでさらに甘みが増していくのも大きな魅力です。</p>
 
             <h3>さつまいも栽培のポイント</h3>
             <ul>
@@ -208,6 +205,7 @@
                 <li><strong>つる返しを行う：</strong> 伸びたつるの途中から根が出て地面に張ってしまうと栄養が分散するため、つるを持ち上げてひっくり返す「つる返し」を行います。</li>
             </ul>
         </section>
+
 
         <section id="my-crop2">
             <h2>私が育てたい作物②：とうもろこし</h2>
@@ -223,6 +221,7 @@
                 <li><strong>1株に1果にする：</strong> 大きくて甘いとうもろこしにするために、1株から複数の実がなっても、一番上の元気な1本だけを残して他はヤングコーンとして早めに摘み取ります。</li>
             </ul>
         </section>
+
 
         <section id="comparison">
             <h2>マイ作物の栽培スケジュール・難易度まとめ</h2>
@@ -252,6 +251,7 @@
             </table>
         </section>
 
+
         <section>
             <h2>学校リンク ＆ 栽培参考サイト</h2>
             <div class="btn-container">
@@ -266,15 +266,11 @@
     </div>
 
     <script>
-        // 加点項目: JavaScriptによる動的変化の実装
         const jsButton = document.getElementById('js-button');
         jsButton.addEventListener('click', function() {
-            // 背景色と文字色の変更
             this.style.backgroundColor = '#212121';
             this.style.color = '#ffffff';
-            // テキストの変更
-            this.textContent = '🔥 豊作を目指して栽培スタート！';
-            // アラートの表示
+            this.textContent = '🔥 豊作を目指してスタート！';
             alert('「マイ作物紹介サイト」をご覧いただきありがとうございます！たくさん収穫できるように頑張ります！');
         });
     </script>
